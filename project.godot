@@ -39,4 +39,5 @@ right={
 [rendering]
 
 quality/driver/driver_name="GLES2"
+environment/default_clear_color=Color( 0.172549, 0.172549, 0.180392, 1 )
 environment/default_environment="res://default_env.tres"
