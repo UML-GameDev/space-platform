@@ -18,6 +18,11 @@ _global_script_class_icons={
 config/name="Space Platform"
 config/icon="res://icon.png"
 
+[gdnative]
+
+singletons=[  ]
+
 [rendering]
 
+quality/driver/driver_name="GLES2"
 environment/default_environment="res://default_env.tres"
