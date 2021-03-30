@@ -1,8 +1,12 @@
 extends KinematicBody2D
 
-export (int) var SPEED = 200
-export (int) var G = 1000
+const SPEED = 200
+const G = 1000
+const FLOOR_DISTANCE = 50
 
+onready var sprite = $AnimatedSprite
+
+var snap_vec = Vector2.DOWN * FLOOR_DISTANCE
 var velocity = Vector2()
 
 # Called when the node enters the scene tree for the first time.
@@ -14,14 +18,14 @@ func get_input():
 	if(Input.is_action_pressed("right")):
 		#move right
 		velocity.x += SPEED
+		sprite.flip_h = false;
 	elif(Input.is_action_pressed("left")):
 		#move left
 		velocity.x += -SPEED
-	else:
-		velocity.x = 0
+		sprite.flip_h = true;
 #	pass
 
 func _physics_process(delta):
 	get_input()
-	velocity.y += delta * G
-	velocity = move_and_slide(velocity,Vector2(0,-1))
+	velocity.y += delta * G	
+	velocity = move_and_slide_with_snap(velocity,snap_vec,Vector2.UP,true,4,0.9,false)

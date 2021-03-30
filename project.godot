@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Space Platform"
-run/main_scene="res://Scene.tscn"
+run/main_scene="res://src/Main.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/dpi/allow_hidpi=true
 
 [gdnative]
 
