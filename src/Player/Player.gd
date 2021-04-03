@@ -5,24 +5,24 @@ const G = 1000
 const FLOOR_DISTANCE = 50
 
 onready var sprite = $AnimatedSprite
+onready var ray = $RayCast2D
 
 var snap_vec = Vector2.DOWN * FLOOR_DISTANCE
 var velocity = Vector2()
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
 func get_input():
 	velocity.x = 0
 	if(Input.is_action_pressed("right")):
 		#move right
 		velocity.x += SPEED
+		#flip the sprite and raycast
 		sprite.flip_h = false;
+		ray.scale.x = 1
 	elif(Input.is_action_pressed("left")):
 		#move left
 		velocity.x += -SPEED
 		sprite.flip_h = true;
+		ray.scale.x = -1
 #	pass
 
 func _physics_process(delta):

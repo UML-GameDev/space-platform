@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://placeholder/tile_placeholder.png" type="Texture" id=1]
+[ext_resource path="res://src/Level/Lever.tscn" type="PackedScene" id=2]
+
+[node name="Platform" type="KinematicBody2D"]
+collision_layer = 2
+motion/sync_to_physics = true
+
+[node name="Lever" parent="." instance=ExtResource( 2 )]
+position = Vector2( 38.4233, -101.764 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 5, 1 )
+texture = ExtResource( 1 )
+hframes = 3
+frame = 1
+region_rect = Rect2( 5, 0, 0, 0 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -73.5945, -15.9535, -79.875, -14.5, -79.8615, 15.8151, 80.0244, 16.3967, 80, -13.875, 74.2592, -15.8969 )
+one_way_collision = true
