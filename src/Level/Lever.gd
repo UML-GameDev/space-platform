@@ -17,12 +17,10 @@ func finished(_name):
 func interacted():
 	if(canPull):
 		if(isPulled):
-			print("pull up")
 			isPulled = false
 			animPlayer.play("PullUp")
 			emit_signal("lever_pull_up")
 		else:
-			print("pull down")
 			isPulled = true
 			animPlayer.play("PullDown")
 			emit_signal("lever_pull_down")
