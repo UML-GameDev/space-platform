@@ -11,8 +11,8 @@ func _ready():
 
 func move():
 	animPlayer.play("Move")
-	lever.finished("");
+	lever.nodeFinished("");
 	
 func stop():
 	animPlayer.stop(false);
-	lever.finished("");
+	lever.nodeFinished("");
