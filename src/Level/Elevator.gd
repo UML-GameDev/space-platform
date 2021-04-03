@@ -8,7 +8,7 @@ onready var lever = $Lever
 func _ready():
 	lever.connect("lever_pull_up",self,"go_up")
 	lever.connect("lever_pull_down",self,"go_down")
-	animPlayer.connect("animation_finished",lever,"finished")
+	animPlayer.connect("animation_finished",lever,"nodeFinished")
 
 func go_down():
 	animPlayer.play("MoveDown")
