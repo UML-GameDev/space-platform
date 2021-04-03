@@ -15,7 +15,8 @@ func finished(_name):
 #When player interacted with lever
 #it will check whether is can be pulled and which direction to pull
 func interacted():
-	if(canPull):
+	if(!animPlayer.is_playing() and canPull):
+		canPull = false
 		if(isPulled):
 			isPulled = false
 			animPlayer.play("PullUp")
@@ -24,4 +25,3 @@ func interacted():
 			isPulled = true
 			animPlayer.play("PullDown")
 			emit_signal("lever_pull_down")
-		canPull = false
