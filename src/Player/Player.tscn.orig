@@ -1,9 +1,16 @@
+<<<<<<< HEAD
+[gd_scene load_steps=12 format=2]
+=======
 [gd_scene load_steps=11 format=2]
+>>>>>>> 3255ab340e5eea29ef92b25d8ca3484eec02b949
 
 [ext_resource path="res://src/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://placeholder/placeholder_idle.png" type="Texture" id=2]
 [ext_resource path="res://src/Player/PlayerInteraction.gd" type="Script" id=3]
+<<<<<<< HEAD
 [ext_resource path="res://src/Player/Oxygen.tscn" type="PackedScene" id=4]
+=======
+>>>>>>> 3255ab340e5eea29ef92b25d8ca3484eec02b949
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -69,6 +76,7 @@ enabled = true
 cast_to = Vector2( 0, 15 )
 collision_mask = 6
 collide_with_areas = true
+<<<<<<< HEAD
 
 [node name="Oxygen" parent="." instance=ExtResource( 4 )]
 margin_left = -60.0
@@ -76,3 +84,5 @@ margin_top = -80.0
 margin_right = -60.0
 margin_bottom = -80.0
 rect_scale = Vector2( 4, 3 )
+=======
+>>>>>>> 3255ab340e5eea29ef92b25d8ca3484eec02b949
