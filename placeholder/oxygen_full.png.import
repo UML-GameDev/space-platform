@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Untitled.png-13bff1e5d1b06514b0c32aa07d4da312.stex"
+path="res://.import/oxygen_full.png-46d2dfee160424ea75eac36181720d08.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Player/Untitled.png"
-dest_files=[ "res://.import/Untitled.png-13bff1e5d1b06514b0c32aa07d4da312.stex" ]
+source_file="res://placeholder/oxygen_full.png"
+dest_files=[ "res://.import/oxygen_full.png-46d2dfee160424ea75eac36181720d08.stex" ]
 
 [params]
 
