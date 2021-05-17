@@ -1,9 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/Player/Oxygen.gd" type="Script" id=1]
-[ext_resource path="res://placeholder/oxygen_full.png" type="Texture" id=2]
-[ext_resource path="res://placeholder/oxyen_empty.png" type="Texture" id=3]
-
+[ext_resource path="res://placeholder/player/oxygen_full.png" type="Texture" id=2]
+[ext_resource path="res://placeholder/player/oxyen_empty.png" type="Texture" id=3]
 
 
 [node name="Oxygen" type="Control"]

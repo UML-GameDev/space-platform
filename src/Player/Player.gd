@@ -31,3 +31,4 @@ func _physics_process(delta):
 	velocity.y += delta * G	
 	var is_on_platform = platform_ray.is_colliding()
 	velocity = move_and_slide_with_snap(velocity,snap_vec,Vector2.UP,not is_on_platform,4,0.9,false)
+
