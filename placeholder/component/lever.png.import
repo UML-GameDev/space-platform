@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/placeholder_rig_final.png-358e00a9ca3ae638e3cfe522500b9de4.stex"
+path="res://.import/lever.png-c2cfadfeb664d0dc424f08fc3250d3cd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://placeholder/placeholder_rig_final.png"
-dest_files=[ "res://.import/placeholder_rig_final.png-358e00a9ca3ae638e3cfe522500b9de4.stex" ]
+source_file="res://placeholder/component/lever.png"
+dest_files=[ "res://.import/lever.png-c2cfadfeb664d0dc424f08fc3250d3cd.stex" ]
 
 [params]
 

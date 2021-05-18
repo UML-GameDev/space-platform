@@ -1,7 +1,8 @@
 extends KinematicBody2D
 
 const SPEED = 350
-const G = 1000
+const G = 100
+var zero_gravity = false
 const FLOOR_DISTANCE = 50
 
 onready var sprite = $AnimatedSprite
@@ -24,10 +25,23 @@ func get_input():
 		velocity.x += -SPEED
 		sprite.flip_h = true;
 		interactRay.scale.x = -1
-#	pass
+
+func get_vertical_input():
+	velocity.y = 0
+	if(Input.is_action_pressed("up")):
+		velocity.y -= SPEED
+	elif(Input.is_action_pressed("down")):
+		velocity.y += SPEED
+		
 
 func _physics_process(delta):
 	get_input()
-	velocity.y += delta * G	
+	if(zero_gravity):
+		get_vertical_input()
+
+	velocity.y += G	
+		
 	var is_on_platform = platform_ray.is_colliding()
-	velocity = move_and_slide_with_snap(velocity,snap_vec,Vector2.UP,not is_on_platform,4,0.9,false)
+	#velocity = move_and_slide_with_snap(velocity,snap_vec,Vector2.UP,not is_on_platform,4,0.9,false)
+	velocity = move_and_slide(velocity,Vector2.UP,not is_on_platform,4,0.9,false)
+

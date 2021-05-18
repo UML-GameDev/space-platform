@@ -1,17 +1,12 @@
 extends Control
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 var MAX_OXYGEN = 100
 onready var currOxygen = 100.0
 onready var canBreathe = true
 
 onready var scale = get_node("Sprite/currOxygenBar")
 onready var opacity = get_node("Sprite")
-onready var toggle = get_node("/root/Main/Level/Lever")
+#onready var toggle = get_node("/root/Main/Level/Lever")
 
 onready var alpha = 1.0
 
@@ -19,8 +14,8 @@ onready var basePosition = scale.position.x
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	toggle.connect("lever_pull_up",self,"setBreathTrue")
-	toggle.connect("lever_pull_down",self,"setBreathFalse")
+	#toggle.connect("lever_pull_up",self,"setBreathTrue")
+	#toggle.connect("lever_pull_down",self,"setBreathFalse")
 	pass # Replace with function body.
 
 
@@ -72,8 +67,8 @@ func updateOxygen():
 
 func setBreathTrue():
 	canBreathe = true
-	toggle.nodeFinished("")
+	#toggle.nodeFinished("")
 
 func setBreathFalse():
 	canBreathe = false
-	toggle.nodeFinished("")
+	#toggle.nodeFinished("")
